@@ -1,0 +1,52 @@
+1 Creating a NumPy Array
+[1]: import numpy as np
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.arange(10, 21)
+arr3 = np.linspace(0, 1, 5)
+print(arr1)
+print(arr2)
+print(arr3)
+[1 2 3 4 5]
+[10 11 12 13 14 15 16 17 18 19 20]
+[0. 0.25 0.5 0.75 1. ]
+2 Indexing and Slicing
+[2]: arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.arange(10, 21)
+print(arr1[2])
+print(arr2[3:6])
+3
+[13 14 15]
+3 Array Operations
+[3]: arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([10, 21,4,5,6])
+result = arr1 + arr2
+print(result)
+[11 23 7 9 11]
+1
+4 Reshaping Arrays
+[4]: arr1 = np.array([1, 2, 3, 4, 5,7,8,9])
+reshaped = arr1.reshape(2, 4)
+print(reshaped)
+[[1 2 3 4]
+[5 7 8 9]]
+5 Array Concatenation
+[5]: arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([10, 21,4,5,6])
+concatenated = np.concatenate((arr1, arr2))
+print(concatenated)
+[ 1 2 3 4 5 10 21 4 5 6]
+6 Aggregating Data
+[6]: arr1 = np.array([1, 2, 3, 4, 5,45,67,34])
+mean_value = np.mean(arr1)
+print(mean_value)
+20.125
+7 Filtering Data
+[7]: arr2 = np.array([10, 21,4,5,6,34,56,23])
+filtered = arr2[arr2 > 15]
+print(filtered)
+[21 34 56 23]
+8 Sorting Arrays
+[8]: arr1 = np.array([10,45,21,4,5,6,34,56,23])
+sorted_arr = np.sort(arr1)
+print(sorted_arr)
+[ 4 5 6 10 21 23 34 45 56]
