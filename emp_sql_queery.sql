@@ -1,6 +1,6 @@
 show databases;
  use sys;
-show table;
+show tables;
 select * from metrics;
 describe metrics;
 create database sql_intro;
@@ -19,6 +19,11 @@ values("jimmy", 35, "M", "2005-05-30", "chicago", 70000),
 ("Sara", 32,"F", "2017-10-27", "new york", 72000),
 ("Ammy", 35, "F", "2014-12-20", "seattle", 80000);
 
+
+insert into emp_details 
+values("dipak yashvant jagadale ", 90, "M" , "2023-12-18", "mumbai", "120000");
+
+
 select * from emp_details;
 
 select distinct city from emp_details;
@@ -27,6 +32,15 @@ select count(name) as count_name from emp_details;
 
 
 select avg(salary) from emp_details;
+
+select Name, Age, city  from emp_details;
+
+select * from emp_details where age >30;
+
+select  name, sex,city from emp_details where sex = "F" ;
+
+
+
 
 
 
