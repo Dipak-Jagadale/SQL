@@ -329,7 +329,10 @@ values
 ;
 
 
-UPDAT
+UPDATE student90 
+set grade = "B"
+where marks between 70 and 80;
+
 
 
 
