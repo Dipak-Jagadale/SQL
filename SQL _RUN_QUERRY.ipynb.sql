@@ -35,7 +35,11 @@ show tables;
 #);
 
 
-drop table student3;
+drop table pay_ment;
+
+
+
+
 create table student4 (
 rollno int primary key,
 name varchar(50));
@@ -124,8 +128,6 @@ select
 
 
 
-SELECT DATABASE  COLLEGEE;
-USE COLLEGEE;
 
 CREATE TABLE student90 (
 rollno int primary key,
@@ -307,10 +309,10 @@ WHERE NAME = "CHETAN";
 SELECT * FROM STUDENT90;
 
 update student90
-set ROLLNO = "11",NAME = "PRIYA", MARKS = "89",CITY = "NEVRI";
+set ROLLNO = "999",NAME = "PRIYA", MARKS = "89",CITY = "NEVRI";
 
 
-CREATE TABLE student90 (
+CREATE TABLE stud_mark (
 rollno int primary key,
 name VARCHAR (50),
 marks int not null ,
@@ -318,22 +320,68 @@ grade varchar(25),
 city VARCHAR(20)
 );
 
-insert into student90 
+insert into stud_mark
 (rollno, name , marks,grade, city)
 values
-(501, "anil", 78, "C", "pune"),
-(502, "bhumika", 93, "A", "Mumbai"),
-(503, "chetan", 96, "B", "Mumbai"),
-(504, "DJ", 98, "A", "pune"),
-(505, "Dipak", 99, "A", "Mumbai")
+(91, "anil", 78, "C", "pune"),
+(92, "bhumika", 93, "A", "Mumbai"),
+(93, "chetan", 96, "B", "Mumbai"),
+(94, "DJ", 98, "A", "pune"),
+(95, "Dipak", 99, "A", "Mumbai")
 ;
 
 
 UPDATE student90 
-set grade = "B"
+set grade = "O"
 where marks between 70 and 80;
 
 
+select * from stud_mark;
+
+
+UPDATE student90
+SET MARKS = 41
+WHERE ROLLNO = 501;
+
+
+
+
+CREATE TABLE department (
+id int primary key,
+name varchar(50)
+);
+
+INSERT INTO department
+VALUES
+(501,"marathi"),
+(502,"IT");
+
+
+update department
+set id = 511
+where id = 501;
+
+select * from department;
+
+CREATE TABLE principal (
+id int PRIMARY KEY,
+NAME VARCHAR(50),
+department_id int,
+FOREIGN KEY (department_id) REFERENCES department(id)
+ON UPDATE CASCADE 
+ON DELETE CASCADE
+);
+
+
+drop table principal;
+
+INSERT INTO principal
+VALUES
+(501, "Adam", 501),
+(502, "Eve", 502);
+
+
+select * from principal;
 
 
 
@@ -341,34 +389,31 @@ where marks between 70 and 80;
 
 
 
+CREATE TABLE stud_mark (
+rollno int primary key,
+name VARCHAR (50),
+marks int not null ,
+grade varchar(25),
+city VARCHAR(20)
+);
 
+insert into stud_mark
+(rollno, name , marks,grade, city)
+values
+(91, "anil", 78, "C", "pune"),
+(92, "bhumika", 93, "A", "Mumbai"),
+(93, "chetan", 96, "B", "Mumbai"),
+(94, "DJ", 98, "A", "pune"),
+(95, "Dipak", 99, "A", "Mumbai")
+;
 
+select * from stud_mark;
 
+ALTER TABLE stud_mark
+ADD COLUMN age INT;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ALTER TABLE stud_mark
+DROP COLUMN age;
 
 
 
