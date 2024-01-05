@@ -410,14 +410,24 @@ values
 select * from stud_mark;
 
 ALTER TABLE stud_mark
-ADD COLUMN age INT;
+ADD COLUMN age INT NOT NULL DEFAULT 19;
+
+
+
+
+ALTER TABLE STUD_MARK
+MODIFY COLUMN age varchar(2);
+
+INSERT INTO  stud_mark
+(ROLLNO, NAME , marks,grade, city)
+values
+(107, "gargi", 68,"B","banglore");
 
 ALTER TABLE stud_mark
-DROP COLUMN age;
+change age stud_age int;
 
-
-
-
+alter table stu
+rename to student;
 
 
 
